@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="760" viewBox="0 0 1500 760" role="img" aria-label="EClever — system context (planned)">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#60798d"/></marker></defs>
+<rect width="1500" height="760" fill="#f8fafc"/>
+<text x="48" y="66" font-size="32" font-weight="700" fill="#193348" font-family="Arial">EClever — system context (planned)</text>
+<line x1="300" y1="215" x2="535" y2="310" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="417.5" y="251.5" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">Exercises, code, Hints</text>
+<line x1="300" y1="365" x2="535" y2="365" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="417.5" y="354.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">Class, progress</text>
+<line x1="300" y1="515" x2="535" y2="450" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="417.5" y="471.5" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">CLI operations</text>
+<line x1="965" y1="365" x2="1200" y2="375" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1082.5" y="359.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">Scrubbed Hint context / checked response</text>
+<rect x="65" y="165" width="235" height="100" rx="26" fill="#eaf6f4" stroke="#127568" stroke-width="3"/>
+<text x="182.5" y="201.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Student</text>
+<text x="182.5" y="229.0" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Practice Python; request Hints</text>
+<rect x="65" y="315" width="235" height="100" rx="26" fill="#eaf6f4" stroke="#127568" stroke-width="3"/>
+<text x="182.5" y="351.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Teacher</text>
+<text x="182.5" y="379.0" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Roster; sections; progress</text>
+<rect x="65" y="465" width="235" height="100" rx="26" fill="#eaf6f4" stroke="#127568" stroke-width="3"/>
+<text x="182.5" y="501.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Administrator</text>
+<text x="182.5" y="529.0" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Provision; publish; export</text>
+<rect x="535" y="230" width="430" height="285" rx="26" fill="#e7eefc" stroke="#285ca1" stroke-width="3"/>
+<text x="750.0" y="330.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">EClever system</text>
+<text x="750.0" y="358.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Web client + modular backend</text>
+<text x="750.0" y="386.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Code Runner + PostgreSQL</text>
+<text x="750.0" y="414.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Student and Teacher data stay in KZ</text>
+<rect x="1200" y="315" width="235" height="120" rx="26" fill="#fff2e4" stroke="#b46a20" stroke-width="3"/>
+<text x="1317.5" y="361.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">LLM provider</text>
+<text x="1317.5" y="389.0" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">External service</text>
+<rect x="40" y="580" width="1420" height="135" rx="14" fill="#eef2f7"/>
+<text x="65" y="615" font-family="Arial" font-size="17" fill="#385268">• EClever application and personal-data database: Kazakhstan deployment for real Students</text>
+<text x="65" y="650" font-family="Arial" font-size="17" fill="#385268">• LLM request: pseudonymised and scrubbed; provider location and legal basis need approval</text>
+<text x="65" y="685" font-family="Arial" font-size="17" fill="#385268">• Legal-representative consent is collected outside EClever; Teacher confirms it</text>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "title": "EClever — system context (planned)", "width": 1500, "height": 760,
+  "notes": ["EClever application and personal-data database: Kazakhstan deployment for real Students", "LLM request: pseudonymised and scrubbed; provider location and legal basis need approval", "Legal-representative consent is collected outside EClever; Teacher confirms it"],
+  "nodes": [
+    {"id":"student","x":65,"y":165,"w":235,"h":100,"text":"Student\nPractice Python; request Hints","kind":"actor"},
+    {"id":"teacher","x":65,"y":315,"w":235,"h":100,"text":"Teacher\nRoster; sections; progress","kind":"actor"},
+    {"id":"admin","x":65,"y":465,"w":235,"h":100,"text":"Administrator\nProvision; publish; export","kind":"actor"},
+    {"id":"eclever","x":535,"y":230,"w":430,"h":285,"text":"EClever system\nWeb client + modular backend\nCode Runner + PostgreSQL\nStudent and Teacher data stay in KZ","kind":"system"},
+    {"id":"llm","x":1200,"y":315,"w":235,"h":120,"text":"LLM provider\nExternal service","kind":"external"}
+  ],
+  "edges": [
+    {"from":"student","to":"eclever","label":"Exercises, code, Hints","x1":300,"y1":215,"x2":535,"y2":310},
+    {"from":"teacher","to":"eclever","label":"Class, progress","x1":300,"y1":365,"x2":535,"y2":365},
+    {"from":"admin","to":"eclever","label":"CLI operations","x1":300,"y1":515,"x2":535,"y2":450},
+    {"from":"eclever","to":"llm","label":"Scrubbed Hint context / checked response","x1":965,"y1":365,"x2":1200,"y2":375}
+  ]
+}

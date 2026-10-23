@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2100" viewBox="0 0 1120 2100" role="img" aria-label="EClever — first-release use case diagram (planned)">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#60798d"/></marker></defs>
+<rect width="1120" height="2100" fill="#f8fafc"/>
+<text x="48" y="66" font-size="32" font-weight="700" fill="#193348" font-family="Arial">EClever — first-release use case diagram (planned)</text>
+<rect x="365" y="110" width="455" height="1780" fill="#ffffff" stroke="#8ba3b5" stroke-width="3"/>
+<text x="385" y="144" font-family="Arial" font-size="20" font-weight="700" fill="#385268">EClever system</text>
+<line x1="250" y1="428" x2="390" y2="169" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="428" x2="390" y2="264" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="428" x2="390" y2="359" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="428" x2="390" y2="454" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="428" x2="390" y2="549" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="428" x2="390" y2="644" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="428" x2="390" y2="739" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="1118" x2="390" y2="949" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="1118" x2="390" y2="1044" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="1118" x2="390" y2="1139" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="1118" x2="390" y2="1234" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="1118" x2="390" y2="1329" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="1118" x2="390" y2="1424" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="1618" x2="390" y2="1519" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="1618" x2="390" y2="1614" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="1618" x2="390" y2="1709" stroke="#60798d" stroke-width="2.5"/>
+<line x1="250" y1="1618" x2="390" y2="1804" stroke="#60798d" stroke-width="2.5"/>
+<line x1="850" y1="733" x2="800" y2="739" stroke="#60798d" stroke-width="2.5"/>
+<circle cx="147.5" cy="397" r="12" fill="none" stroke="#274c65" stroke-width="3"/>
+<path d="M 147.5 409 L 147.5 440 M 124.5 420 L 170.5 420 M 147.5 440 L 127.5 463 M 147.5 440 L 167.5 463" fill="none" stroke="#274c65" stroke-width="3"/>
+<text x="147.5" y="503" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Student</text>
+<circle cx="147.5" cy="1087" r="12" fill="none" stroke="#274c65" stroke-width="3"/>
+<path d="M 147.5 1099 L 147.5 1130 M 124.5 1110 L 170.5 1110 M 147.5 1130 L 127.5 1153 M 147.5 1130 L 167.5 1153" fill="none" stroke="#274c65" stroke-width="3"/>
+<text x="147.5" y="1193" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Teacher</text>
+<circle cx="147.5" cy="1587" r="12" fill="none" stroke="#274c65" stroke-width="3"/>
+<path d="M 147.5 1599 L 147.5 1630 M 124.5 1610 L 170.5 1610 M 147.5 1630 L 127.5 1653 M 147.5 1630 L 167.5 1653" fill="none" stroke="#274c65" stroke-width="3"/>
+<text x="147.5" y="1693" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Administrator</text>
+<circle cx="962.5" cy="702" r="12" fill="none" stroke="#274c65" stroke-width="3"/>
+<path d="M 962.5 714 L 962.5 745 M 939.5 725 L 985.5 725 M 962.5 745 L 942.5 768 M 962.5 745 L 982.5 768" fill="none" stroke="#274c65" stroke-width="3"/>
+<text x="962.5" y="808" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">LLM provider</text>
+<ellipse cx="595.0" cy="169.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="169.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Log in and view Skill progress</text>
+<ellipse cx="595.0" cy="264.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="264.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Continue to next action</text>
+<ellipse cx="595.0" cy="359.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="359.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Choose eligible Exercise</text>
+<ellipse cx="595.0" cy="454.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="454.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Predict program output</text>
+<ellipse cx="595.0" cy="549.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="549.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Run visible tests</text>
+<ellipse cx="595.0" cy="644.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="644.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Submit solution (all tests)</text>
+<ellipse cx="595.0" cy="739.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="739.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Get next checked Hint</text>
+<ellipse cx="595.0" cy="949.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="949.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Create Class / confirm consent</text>
+<ellipse cx="595.0" cy="1044.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="1044.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Add Students / print login cards</text>
+<ellipse cx="595.0" cy="1139.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="1139.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Reset password / remove Student</text>
+<ellipse cx="595.0" cy="1234.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="1234.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Open course section</text>
+<ellipse cx="595.0" cy="1329.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="1329.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">View Class dashboard / detail</text>
+<ellipse cx="595.0" cy="1424.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="1424.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Review own-Class Safety Flags</text>
+<ellipse cx="595.0" cy="1519.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="1519.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Create Teacher account</text>
+<ellipse cx="595.0" cy="1614.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="1614.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Publish course content</text>
+<ellipse cx="595.0" cy="1709.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="1709.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Export pseudonymous events</text>
+<ellipse cx="595.0" cy="1804.0" rx="205.0" ry="34.0" fill="#f7f8fb" stroke="#506b83" stroke-width="3"/>
+<text x="595.0" y="1804.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Review all Safety Flags</text>
+<rect x="40" y="1920" width="1040" height="135" rx="14" fill="#eef2f7"/>
+<text x="65" y="1955" font-family="Arial" font-size="17" fill="#385268">• Student accounts are generated by Teachers; no self-registration or free-text Tutor chat</text>
+<text x="65" y="1990" font-family="Arial" font-size="17" fill="#385268">• Run uses visible tests, Submit all tests; Predict is formative</text>
+<text x="65" y="2025" font-family="Arial" font-size="17" fill="#385268">• Administrator uses a server-side CLI; legal-representative consent is external</text>
+</svg>
