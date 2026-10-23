@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EClever — черновик ключевых экранов</title>
+  <style>
+    :root { font-family: Arial, sans-serif; color: #253040; background: #f1f3f5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 1000px; }
+    button, select { font: inherit; cursor: pointer; }
+    button { border: 1px solid #929ca8; border-radius: 6px; background: white; color: #253040; padding: 8px 12px; }
+    button.primary { background: #275dad; border-color: #275dad; color: white; }
+    button:disabled { color: #89919a; background: #e8ebee; cursor: default; }
+    .shell { display: grid; grid-template-columns: 185px 1fr; min-height: 100vh; }
+    nav { background: #e0e5e9; padding: 22px 14px; border-right: 1px solid #b9c1c8; }
+    nav strong { display: block; margin-bottom: 28px; font-size: 23px; }
+    nav button { display: block; text-align: left; width: 100%; margin: 7px 0; background: transparent; border: 0; }
+    nav button.active { background: white; font-weight: bold; }
+    main { padding: 20px 28px 90px; max-width: 1550px; width: 100%; margin: auto; }
+    header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+    h1 { font-size: 23px; margin: 0 0 5px; }
+    h2 { font-size: 17px; margin: 0 0 12px; }
+    p { line-height: 1.45; margin: 8px 0; }
+    .muted { color: #637080; font-size: 13px; }
+    .card { background: white; border: 1px solid #bfc6ce; border-radius: 8px; padding: 16px; }
+    .stack { display: grid; gap: 14px; }
+    .row { display: flex; gap: 9px; align-items: center; flex-wrap: wrap; }
+    .pill { display: inline-block; border: 1px solid #aab4bf; border-radius: 20px; padding: 4px 9px; font-size: 12px; background: #f5f7f9; }
+    .work { display: grid; gap: 14px; }
+    .work.a { grid-template-columns: minmax(320px, 38%) minmax(450px, 1fr); grid-template-areas: 'task editor' 'result editor' 'hint editor'; }
+    .work.b { grid-template-columns: minmax(480px, 1fr) 310px; grid-template-areas: 'task task' 'editor result' 'editor hint'; }
+    .work.c { grid-template-columns: 240px minmax(410px, 1fr) 280px; grid-template-areas: 'task editor result' 'task editor hint'; }
+    .work .task { grid-area: task; }
+    .work .editor { grid-area: editor; min-height: 420px; }
+    .work .result { grid-area: result; }
+    .work .hint { grid-area: hint; }
+    .work.c .task { background: #f8fafb; }
+    pre { overflow: auto; padding: 14px; background: #e9edf1; border-radius: 5px; line-height: 1.55; min-height: 235px; margin: 12px 0; }
+    code { font-family: Consolas, monospace; }
+    .result table, .dash table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { border-bottom: 1px solid #d6dce2; padding: 8px; text-align: left; }
+    .bad { background: #fce7e7; }
+    .due { background: #fff2cf; }
+    .good { background: #e7f4e8; }
+    .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .map .card { min-height: 135px; }
+    .wide { grid-column: span 3; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .switcher { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; background: #253040; color: white; padding: 8px 12px; border-radius: 30px; box-shadow: 0 3px 18px #65717d88; z-index: 10; }
+    .switcher button { padding: 4px 11px; }
+    .switcher small { display: block; color: #cbd4dc; }
+    .modal { position: fixed; inset: 0; background: #19253299; display: grid; place-items: center; z-index: 20; }
+    .modal .card { width: min(620px, 90vw); box-shadow: 0 8px 35px #1b263477; }
+    input[type=text] { padding: 9px; border: 1px solid #9ca7b3; border-radius: 5px; min-width: 260px; }
+    /* Visual pass: warm study space, with a clear distinction between learning and checking. */
+    :root { font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; color: #213149; background: #f6f7f6; }
+    body { min-width: 1280px; }
+    .shell { grid-template-columns: 226px 1fr; background: radial-gradient(circle at 80% 5%, #e8f6f3 0, transparent 30%), #f6f7f6; }
+    nav { position: sticky; top: 0; height: 100vh; padding: 30px 16px; background: #14293e; border: 0; color: #d9e7ee; display: flex; flex-direction: column; }
+    nav strong { font-size: 25px; letter-spacing: -.7px; color: white; margin: 0 0 4px 10px; }
+    nav strong::before { content: 'e'; display: inline-grid; place-items: center; width: 35px; height: 35px; margin-right: 9px; border-radius: 12px; background: #58cfbe; color: #143246; font-weight: 900; transform: rotate(-7deg); }
+    nav > .muted { margin: 0 0 34px 12px; color: #91adba; font-size: 10px; letter-spacing: 1.6px; font-weight: bold; }
+    nav button { color: #c6d7df; padding: 13px 14px; border-radius: 11px; margin: 2px 0; font-size: 14px; transition: background .15s; }
+    nav button:hover { background: #27445a; }
+    nav button.active { background: #e9fbf5; color: #155456; box-shadow: inset 4px 0 #39bba7; }
+    nav button[data-screen=course]::before { content: '◫'; }
+    nav button[data-screen=exercise]::before { content: '⌘'; }
+    nav button[data-screen=predict]::before { content: '◇'; }
+    nav button[data-screen=teacher]::before { content: '▦'; }
+    nav button[data-screen=roster]::before { content: '≡'; }
+    nav button::before { display: inline-block; width: 24px; font-size: 18px; vertical-align: -1px; }
+    main { max-width: 1510px; padding: 35px 40px 105px; }
+    header { margin-bottom: 25px; }
+    h1 { font-size: 29px; letter-spacing: -.8px; margin-bottom: 8px; line-height: 1.1; }
+    h2 { font-size: 17px; letter-spacing: -.2px; margin-bottom: 13px; }
+    header .muted { color: #648093; font-size: 14px; }
+    .muted { color: #6e8291; line-height: 1.45; }
+    .card { border: 1px solid #e3e9ec; border-radius: 18px; padding: 21px 23px; box-shadow: 0 8px 28px #17364b0b; }
+    button { border: 1px solid #d3e0e5; border-radius: 10px; padding: 10px 15px; background: #f9fcfb; color: #225b66; font-weight: 700; font-size: 13px; transition: transform .12s, box-shadow .12s; }
+    button:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 3px 12px #2448571a; }
+    button.primary { background: #167b76; border-color: #167b76; color: white; box-shadow: 0 5px 14px #167b762e; }
+    button:disabled { background: #edf2f2; border-color: #edf2f2; color: #9aabad; box-shadow: none; }
+    .pill { border: 0; background: #eaf6f4; color: #197b72; font-weight: 800; letter-spacing: .1px; padding: 7px 12px; }
+    header .pill { background: white; color: #48687b; border: 1px solid #dce8e9; box-shadow: 0 3px 12px #16425910; }
+    .work { gap: 17px; align-items: stretch; }
+    .work.a { grid-template-columns: minmax(320px, 36%) minmax(480px, 1fr); }
+    .work.b { grid-template-columns: minmax(480px, 1fr) 340px; }
+    .work.c { grid-template-columns: 265px minmax(460px, 1fr) 300px; }
+    .work .task { position: relative; border-top: 5px solid #fac177; background: linear-gradient(155deg, #fffaf2 0%, white 55%); }
+    .task h2::before { content: '01'; display: inline-block; margin-right: 11px; padding: 5px 7px; border-radius: 7px; background: #fff0d4; color: #a96010; font-size: 12px; }
+    .task > p:not(.muted) { font-size: 17px; line-height: 1.55; max-width: 42ch; margin: 18px 0; }
+    .task .pill { background: #fff0d9; color: #9a6020; }
+    .task .muted { border-top: 1px solid #f0e7da; padding-top: 14px; margin-top: 20px; }
+    .work .editor { min-height: 460px; border-top: 5px solid #4cc7b4; display: flex; flex-direction: column; }
+    .editor h2::before { content: '02'; display: inline-block; margin-right: 11px; padding: 5px 7px; border-radius: 7px; background: #e5f6f2; color: #168473; font-size: 12px; }
+    pre { position: relative; background: #182c40; color: #e3f0f5; padding: 0 21px 21px; border-radius: 12px; font: 14px/1.8 'Consolas', 'DejaVu Sans Mono', monospace; min-height: 228px; margin: 4px 0 17px; box-shadow: inset 0 0 0 1px #29465b; }
+    pre::before { content: '●   ●   ●                                 main.py'; display: block; margin: 0 -21px 16px; padding: 11px 18px; background: #223b50; color: #8fa9b7; border-radius: 12px 12px 0 0; font-size: 11px; letter-spacing: .2px; }
+    .editor .row { margin-top: auto; padding-top: 4px; }
+    .editor .muted { margin-top: 14px; font-size: 12px; }
+    .work .result { background: #f9fbfd; }
+    .result h2::before { content: '◉'; color: #ed8b54; margin-right: 9px; }
+    .result table { background: white; overflow: hidden; border-radius: 9px; }
+    th { color: #60778a; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; background: #f0f5f7; }
+    th, td { border-bottom: 1px solid #e5edef; padding: 10px; }
+    .bad { background: #fff0ed; color: #a84637; font-weight: 700; }
+    .due { background: #fff5de; color: #8e621d; font-weight: 700; }
+    .good { background: #e5f6ed; color: #28694b; font-weight: 700; }
+    .work .hint { background: linear-gradient(135deg, #eaf6f5 0%, #fff 85%); border-color: #d4e9e6; }
+    .hint h2::before { content: '✦'; color: #158f82; margin-right: 9px; }
+    .hint .muted { font-size: 12px; }
+    .hint button { margin-top: 8px; }
+    .map { gap: 18px; }
+    .map .card { min-height: 160px; position: relative; overflow: hidden; }
+    .map .wide { background: linear-gradient(105deg, #173e56 0%, #1d736f 100%); color: white; min-height: 185px; padding: 27px 30px; }
+    .map .wide::after { content: '↗'; position: absolute; right: 50px; top: -38px; font-size: 180px; color: #ffffff1c; transform: rotate(-15deg); }
+    .map .wide h2 { color: #a9e4d8; text-transform: uppercase; letter-spacing: 1.3px; font-size: 12px; }
+    .map .wide p { font-size: 20px; margin: 16px 0 21px; }
+    .map .wide button { background: white; color: #126e6d; border-color: white; }
+    .map .card:not(.wide)::before { content: '●'; display: block; font-size: 28px; line-height: 1; margin-bottom: 17px; }
+    .map .good::before { color: #3aaf7f; }
+    .map .due::before { color: #eea441; }
+    .map .card:not(.wide):not(.good):not(.due)::before { color: #73a8bc; }
+    .map .good, .map .due { color: #213149; font-weight: normal; }
+    .map .good { background: #f8fcf9; }
+    .map .due { background: #fffcf5; }
+    .two { gap: 20px; }
+    .two .card { min-height: 310px; }
+    .two input[type=text] { display: block; width: 100%; margin: 19px 0 12px; padding: 13px; border-color: #b8cdd3; }
+    .two pre { min-height: 220px; }
+    .dash table { border: 1px solid #e5edef; border-radius: 10px; overflow: hidden; }
+    .dash td:first-child { font-weight: 800; }
+    .dash .muted { padding-top: 11px; }
+    .switcher { gap: 13px; padding: 9px 12px; background: #15293d; border: 1px solid #527283; box-shadow: 0 8px 24px #183a5370; }
+    .switcher button { background: #31536b; color: white; border: 0; font-size: 18px; line-height: 1; }
+    .switcher span { min-width: 165px; text-align: center; font-weight: 800; font-size: 13px; }
+    .switcher small { font-weight: normal; font-size: 10px; color: #a5c3cd; padding-top: 3px; }
+    .modal { backdrop-filter: blur(3px); }
+    .modal .card { border-top: 5px solid #4cc7b4; padding: 29px; }
+  </style>
+</head>
+<body>
+<div class="shell">
+  <nav><strong>EClever</strong><span class="muted">ЧЕРНОВИК — не продукт</span>
+    <button data-screen="course">Карта навыков</button>
+    <button data-screen="exercise">Упражнение</button>
+    <button data-screen="predict">Прогноз вывода</button>
+    <button data-screen="teacher">Класс учителя</button>
+    <button data-screen="roster">Список класса</button>
+  </nav>
+  <main id="page"></main>
+</div>
+<div id="switcher" class="switcher" aria-label="Варианты макета"><button id="prev" aria-label="Предыдущий вариант">←</button><span id="variant-label"></span><button id="next" aria-label="Следующий вариант">→</button></div>
+<div id="modal-root"></div>
+<script>
+// Three structural layouts of the Exercise screen, switchable through ?variant=.
+// PROTOTYPE: static example data; all actions only update local view state.
+const variants = { A: 'Задание слева', B: 'Задание сверху', C: 'Три колонки' };
+const screens = ['course', 'exercise', 'predict', 'teacher', 'roster'];
+const state = { screen: 'exercise', variant: 'A', ran: false, failed: 0, checks: 0, hintLevel: 0, hintAfterCheck: 0, example: false, disclosure: false };
+const page = document.getElementById('page');
+function syncUrl() { const q = new URLSearchParams(location.search); q.set('screen', state.screen); q.set('variant', state.variant); history.replaceState(null, '', '?' + q); }
+function setScreen(screen) { state.screen = screen; syncUrl(); render(); }
+function setVariant(variant) { state.variant = variant; syncUrl(); render(); }
+function cycle(direction) { const keys = Object.keys(variants); setVariant(keys[(keys.indexOf(state.variant) + direction + keys.length) % keys.length]); }
+function header(title, desc) { return `<header><div><h1>${title}</h1><div class="muted">${desc}</div></div><span class="pill">Мария К. · 7 класс</span></header>`; }
+function exercise() {
+  return header('Условные операторы · Исправь код', 'Навык: ветвление с if/else · Сложность 2 из 3') +
+    `<div class="work ${state.variant.toLowerCase()}">
+      <section class="card task"><h2>Задание</h2><p>Программа получает число. Если оно больше нуля, выведи «Положительное». Иначе выведи «Не положительное».</p><span class="pill">Исправь ошибку</span><p class="muted">Время не ограничено. Можно вернуться позже.</p><button onclick="state.example=true;render()">Открыть пример</button></section>
+      <section class="card editor"><h2>Код</h2><pre><code>n = int(input())\nif n &gt; 0:\n    print("Не положительное")\nelse:\n    print("Положительное")</code></pre><div class="row"><button onclick="state.ran=true;state.checks++;render()">Запустить</button><button class="primary" onclick="state.ran=true;state.failed++;state.checks++;render()">Отправить</button><button onclick="setScreen('course')">Вернуться к навыкам</button></div><p class="muted">Запустить проверяет видимые примеры. Отправить проверяет все тесты и сохраняет результат.</p></section>
+      <section class="card result"><h2>Результат проверки</h2>${state.ran ? `<table><tr><th>Ввод</th><th>Ожидается</th><th>Получено</th></tr><tr><td>5</td><td>Положительное</td><td class="bad">Не положительное</td></tr></table><p>Проверь, какая ветка выполняется при числе больше нуля.</p><p class="muted">Скрытые тесты: ${state.failed ? '2 не пройдены' : 'покажутся после отправки'}</p>` : '<p class="muted">Пока нет результата. Сначала запусти код.</p>'}</section>
+      <section class="card hint"><h2>Помощь</h2><p class="muted">Подсказки даёт ИИ. Ответ может быть неточным; проверь его по коду и результатам.</p>${state.hintLevel ? `<p><strong>Подсказка L${state.hintLevel}:</strong> Сравни условие <code>n &gt; 0</code> с текстом в первой ветке.</p>` : ''}<button ${!state.ran || state.hintLevel === 4 || state.checks <= state.hintAfterCheck ? 'disabled' : ''} onclick="requestHint()">${state.hintLevel === 4 ? 'Попросить учителя' : state.failed >= 3 ? 'Хочешь подсказку?' : 'Получить подсказку'}</button><p class="muted">Следующий уровень открывается после новой попытки.</p></section>
+    </div>`;
+}
+function course() { return header('Мои навыки', 'Продолжить рекомендует следующее упражнение или повторение') + `<div class="map">
+  <section class="card wide"><h2>Следующее действие</h2><p><strong>Повтори «Ввод и вывод»</strong> · повторение на 7-й день</p><button class="primary" onclick="setScreen('exercise')">Продолжить</button></section>
+  <section class="card good"><h2>Линейные программы</h2><p>Освоено · 4 навыка</p></section>
+  <section class="card due"><h2>Ввод и вывод</h2><p>Пора повторить · 1 навык</p></section>
+  <section class="card"><h2>Ветвление</h2><p>Практика · 2 навыка</p><button onclick="state.example=true;render()">Начать навык</button></section>
+  </div><p class="muted">Статус навыка показывает учебный этап, а не оценку или процент знаний.</p>`; }
+function predict() { return header('Прогноз вывода', 'Прочитай программу и запиши, что она выведет') + `<div class="two"><section class="card"><h2>Программа</h2><pre><code>x = 4\nif x &gt; 3:\n    print("Да")\nelse:\n    print("Нет")</code></pre><p>Какой текст появится на экране?</p><input id="prediction" type="text" aria-label="Твой прогноз" placeholder="Твой ответ"><button onclick="document.getElementById('prediction-result').textContent='Фактический вывод: Да. Сравни x = 4 и условие x > 3.'">Проверить прогноз</button></section><section class="card"><h2>Обратная связь</h2><p id="prediction-result">После проверки здесь появится фактический вывод.</p><p class="muted">Это тренировка. Прогноз не влияет на освоение навыка.</p><button onclick="setScreen('exercise')">Следующее упражнение</button></section></div>`; }
+function teacher() { return `<header><div><h1>Класс 7А</h1><div class="muted">Учитель · обзор навыков и помощи</div></div><button onclick="setScreen('roster')">Список класса</button></header><div class="stack"><section class="card dash"><h2>Кому нужна помощь</h2><table><tr><th>Ученик</th><th>Ввод и вывод</th><th>Ветвление</th><th>Повторение</th><th>Флаг безопасности</th></tr><tr><td>Мария К.</td><td class="good">Освоено</td><td class="bad">Трудности</td><td class="due">Пора</td><td>—</td></tr><tr><td>Дамир С.</td><td class="good">Освоено</td><td>Практика</td><td>—</td><td>—</td></tr><tr><td>Айдана Т.</td><td>Практика</td><td>Не начато</td><td>—</td><td class="bad">Проверить</td></tr></table><p class="muted">«Трудности»: три неудачные отправки подряд или подсказка L4 без решения.</p><button onclick="document.getElementById('detail').hidden=false">Открыть ученика</button></section><section class="card" id="detail" hidden><h2>Мария К. · детали</h2><p>Последние отправки: 3 ошибки в ветвлении. Подсказки: L1 и L2.</p><p>Исходный код и результаты доступны учителю только для этого класса.</p></section></div>`; }
+function roster() { return `<header><div><h1>Список класса 7А</h1><div class="muted">Управление доступом и разделами курса</div></div><button onclick="setScreen('teacher')">Обзор класса</button></header><div class="two"><section class="card"><h2>Учащиеся</h2><p>Мария К. · Дамир С. · Айдана Т.</p><button>Добавить ученика</button> <button>Печатать карточки входа</button><p class="muted">Логины создаёт учитель. Электронная почта ученика не нужна.</p></section><section class="card"><h2>Доступ к курсу</h2><p>Ветвление: открыт · Циклы: закрыт</p><button>Открыть раздел</button><hr><h2>Подтверждение согласия</h2><label><input type="checkbox"> Законные представители дали согласие вне платформы</label><p><button>Сохранить подтверждение</button></p></section></div>`; }
+function showHint() { state.hintLevel++; state.hintAfterCheck = state.checks; render(); }
+function requestHint() { if (!state.disclosure) { state.disclosure = true; document.getElementById('modal-root').innerHTML = `<div class="modal"><div class="card"><h2>Подсказки создаёт ИИ</h2><p>ИИ может ошибаться. Не вводи личные данные в код. Если ответ кажется странным, спроси учителя.</p><button class="primary" onclick="document.getElementById('modal-root').innerHTML='';showHint()">Понятно</button></div></div>`; return; } showHint(); }
+function render() {
+  document.querySelectorAll('nav button').forEach(b => b.classList.toggle('active', b.dataset.screen === state.screen));
+  page.innerHTML = ({ course, exercise, predict, teacher, roster })[state.screen]();
+  document.getElementById('switcher').style.display = state.screen === 'exercise' ? 'flex' : 'none';
+  document.getElementById('variant-label').innerHTML = `${state.variant} — ${variants[state.variant]}<small>Стрелки ← → меняют макет</small>`;
+  if (state.example) { document.getElementById('modal-root').innerHTML = `<div class="modal"><div class="card"><h2>Пример: проверка условия</h2><pre><code>age = 12\nif age &gt;= 10:\n    print("Старше 9")</code></pre><p>1. Прочитай условие. 2. Сравни число. 3. Посмотри, какая строка выполнится.</p><button onclick="state.example=false;document.getElementById('modal-root').innerHTML=''">Пропустить / закрыть</button></div></div>`; }
+}
+document.querySelectorAll('nav button').forEach(b => b.onclick = () => setScreen(b.dataset.screen));
+document.getElementById('prev').onclick = () => cycle(-1);
+document.getElementById('next').onclick = () => cycle(1);
+document.addEventListener('keydown', e => { if (!['ArrowLeft','ArrowRight'].includes(e.key) || e.target.matches('input,textarea,[contenteditable]')) return; if (state.screen === 'exercise') cycle(e.key === 'ArrowRight' ? 1 : -1); });
+const q = new URLSearchParams(location.search); if (screens.includes(q.get('screen'))) state.screen = q.get('screen'); if (variants[q.get('variant')]) state.variant = q.get('variant'); render();
+</script>
+</body>
+</html>
