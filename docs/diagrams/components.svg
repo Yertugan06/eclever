@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1390" viewBox="0 0 1900 1390" role="img" aria-label="EClever — draft component architecture (planned)">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#60798d"/></marker></defs>
+<rect width="1900" height="1390" fill="#f8fafc"/>
+<text x="48" y="66" font-size="32" font-weight="700" fill="#193348" font-family="Arial">EClever — draft component architecture (planned)</text>
+<line x1="305" y1="235" x2="425" y2="205" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="365.0" y="209.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">REST</text>
+<line x1="305" y1="435" x2="425" y2="255" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="365.0" y="334.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">in-process</text>
+<line x1="775" y1="205" x2="830" y2="205" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="802.5" y="194.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">opened sections</text>
+<line x1="1180" y1="205" x2="1235" y2="205" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1207.5" y="194.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">content view</text>
+<line x1="775" y1="447" x2="830" y2="447" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="802.5" y="436.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">state</text>
+<line x1="1235" y1="447" x2="1180" y2="447" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1207.5" y="436.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">evidence via API</text>
+<line x1="775" y1="707" x2="830" y2="707" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="802.5" y="696.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">check Hint</text>
+<line x1="1180" y1="707" x2="1235" y2="707" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1207.5" y="696.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">moderate</text>
+<line x1="1380" y1="505" x2="650" y2="950" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1015.0" y="716.5" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">internal HTTP (code only)</text>
+<line x1="1410" y1="765" x2="1410" y2="950" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1410.0" y="846.5" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">HTTPS scrubbed context</text>
+<line x1="1005" y1="505" x2="1005" y2="950" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1005.0" y="716.5" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">own schema SQL</text>
+<line x1="1410" y1="390" x2="1410" y2="265" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1410.0" y="316.5" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">events</text>
+<line x1="775" y1="700" x2="1235" y2="490" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1005.0" y="584.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">leak evaluation</text>
+<line x1="600" y1="650" x2="830" y2="490" stroke="#60798d" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="715.0" y="559.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#365369" stroke="#f8fafc" stroke-width="5" paint-order="stroke">hint use</text>
+<rect x="55" y="180" width="250" height="110" rx="26" fill="#fff2e4" stroke="#b46a20" stroke-width="3"/>
+<text x="180.0" y="221.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Web Client</text>
+<text x="180.0" y="249.0" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">React + TypeScript</text>
+<rect x="55" y="380" width="250" height="110" rx="26" fill="#fff2e4" stroke="#b46a20" stroke-width="3"/>
+<text x="180.0" y="421.0" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Admin CLI</text>
+<text x="180.0" y="449.0" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Server-side</text>
+<rect x="425" y="150" width="350" height="115" rx="26" fill="#eff8f5" stroke="#20806b" stroke-width="3"/>
+<text x="600.0" y="193.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Identity &amp; Classes</text>
+<text x="600.0" y="221.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Accounts / consent / sections</text>
+<rect x="830" y="150" width="350" height="115" rx="26" fill="#eff8f5" stroke="#20806b" stroke-width="3"/>
+<text x="1005.0" y="193.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Course Content</text>
+<text x="1005.0" y="221.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Skills / Exercises / tests</text>
+<rect x="1235" y="150" width="350" height="115" rx="26" fill="#eff8f5" stroke="#20806b" stroke-width="3"/>
+<text x="1410.0" y="193.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Learning Analytics</text>
+<text x="1410.0" y="221.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Events / dashboards / export</text>
+<rect x="425" y="390" width="350" height="115" rx="26" fill="#eff8f5" stroke="#20806b" stroke-width="3"/>
+<text x="600.0" y="433.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Adaptive Recommendation</text>
+<text x="600.0" y="461.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Continue / unlock / difficulty</text>
+<rect x="830" y="390" width="350" height="115" rx="26" fill="#eff8f5" stroke="#20806b" stroke-width="3"/>
+<text x="1005.0" y="433.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Knowledge Model</text>
+<text x="1005.0" y="461.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Estimator / Mastery Policy</text>
+<rect x="1235" y="390" width="350" height="115" rx="26" fill="#eff8f5" stroke="#20806b" stroke-width="3"/>
+<text x="1410.0" y="433.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Submissions</text>
+<text x="1410.0" y="461.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Run / Submit / evaluate</text>
+<rect x="425" y="650" width="350" height="115" rx="26" fill="#eff8f5" stroke="#20806b" stroke-width="3"/>
+<text x="600.0" y="693.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">AI Tutor</text>
+<text x="600.0" y="721.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">L1–L4 / fallback</text>
+<rect x="830" y="650" width="350" height="115" rx="26" fill="#eff8f5" stroke="#20806b" stroke-width="3"/>
+<text x="1005.0" y="693.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Safety</text>
+<text x="1005.0" y="721.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Checks / flags</text>
+<rect x="1235" y="650" width="350" height="115" rx="26" fill="#eff8f5" stroke="#20806b" stroke-width="3"/>
+<text x="1410.0" y="693.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">LLM Gateway</text>
+<text x="1410.0" y="721.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Scrub / provider / spend</text>
+<rect x="425" y="950" width="350" height="115" rx="26" fill="#fff2e4" stroke="#b46a20" stroke-width="3"/>
+<text x="600.0" y="993.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">Code Runner</text>
+<text x="600.0" y="1021.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">Separate gVisor service</text>
+<rect x="830" y="950" width="350" height="115" rx="26" fill="#fff2e4" stroke="#b46a20" stroke-width="3"/>
+<text x="1005.0" y="993.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">PostgreSQL</text>
+<text x="1005.0" y="1021.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">KZ; schema per module</text>
+<rect x="1235" y="950" width="350" height="115" rx="26" fill="#fff2e4" stroke="#b46a20" stroke-width="3"/>
+<text x="1410.0" y="993.5" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#193348">LLM provider</text>
+<text x="1410.0" y="1021.5" text-anchor="middle" font-family="Arial" font-size="17" font-weight="400" fill="#193348">External / cross-border</text>
+<rect x="40" y="1210" width="1820" height="135" rx="14" fill="#eef2f7"/>
+<text x="65" y="1245" font-family="Arial" font-size="17" fill="#385268">• Nine backend modules run in one FastAPI process and own separate PostgreSQL schemas</text>
+<text x="65" y="1280" font-family="Arial" font-size="17" fill="#385268">• Solid arrows indicate principal synchronous calls; Submission → Safety background check is noted separately</text>
+<text x="65" y="1315" font-family="Arial" font-size="17" fill="#385268">• Runner receives code + stdin + limits only; expected outputs and identities stay in backend</text>
+</svg>

@@ -1,0 +1,35 @@
+{
+  "title":"EClever — draft component architecture (planned)","width":1900,"height":1390,
+  "notes":["Nine backend modules run in one FastAPI process and own separate PostgreSQL schemas", "Solid arrows indicate principal synchronous calls; Submission → Safety background check is noted separately", "Runner receives code + stdin + limits only; expected outputs and identities stay in backend"],
+  "nodes":[
+    {"id":"web","x":55,"y":180,"w":250,"h":110,"text":"Web Client\nReact + TypeScript","kind":"external"},
+    {"id":"cli","x":55,"y":380,"w":250,"h":110,"text":"Admin CLI\nServer-side","kind":"external"},
+    {"id":"identity","x":425,"y":150,"w":350,"h":115,"text":"Identity & Classes\nAccounts / consent / sections","kind":"module"},
+    {"id":"content","x":830,"y":150,"w":350,"h":115,"text":"Course Content\nSkills / Exercises / tests","kind":"module"},
+    {"id":"analytics","x":1235,"y":150,"w":350,"h":115,"text":"Learning Analytics\nEvents / dashboards / export","kind":"module"},
+    {"id":"recommendation","x":425,"y":390,"w":350,"h":115,"text":"Adaptive Recommendation\nContinue / unlock / difficulty","kind":"module"},
+    {"id":"knowledge","x":830,"y":390,"w":350,"h":115,"text":"Knowledge Model\nEstimator / Mastery Policy","kind":"module"},
+    {"id":"submissions","x":1235,"y":390,"w":350,"h":115,"text":"Submissions\nRun / Submit / evaluate","kind":"module"},
+    {"id":"tutor","x":425,"y":650,"w":350,"h":115,"text":"AI Tutor\nL1–L4 / fallback","kind":"module"},
+    {"id":"safety","x":830,"y":650,"w":350,"h":115,"text":"Safety\nChecks / flags","kind":"module"},
+    {"id":"gateway","x":1235,"y":650,"w":350,"h":115,"text":"LLM Gateway\nScrub / provider / spend","kind":"module"},
+    {"id":"runner","x":425,"y":950,"w":350,"h":115,"text":"Code Runner\nSeparate gVisor service","kind":"external"},
+    {"id":"db","x":830,"y":950,"w":350,"h":115,"text":"PostgreSQL\nKZ; schema per module","kind":"external"},
+    {"id":"provider","x":1235,"y":950,"w":350,"h":115,"text":"LLM provider\nExternal / cross-border","kind":"external"}
+  ],
+  "edges":[
+    {"from":"web","to":"identity","label":"REST","x1":305,"y1":235,"x2":425,"y2":205},{"from":"cli","to":"identity","label":"in-process","x1":305,"y1":435,"x2":425,"y2":255},
+    {"from":"identity","to":"content","label":"opened sections","x1":775,"y1":205,"x2":830,"y2":205},
+    {"from":"content","to":"analytics","label":"content view","x1":1180,"y1":205,"x2":1235,"y2":205},
+    {"from":"recommendation","to":"knowledge","label":"state","x1":775,"y1":447,"x2":830,"y2":447},
+    {"from":"submissions","to":"knowledge","label":"evidence via API","x1":1235,"y1":447,"x2":1180,"y2":447},
+    {"from":"tutor","to":"safety","label":"check Hint","x1":775,"y1":707,"x2":830,"y2":707},
+    {"from":"safety","to":"gateway","label":"moderate","x1":1180,"y1":707,"x2":1235,"y2":707},
+    {"from":"submissions","to":"runner","label":"internal HTTP (code only)","x1":1380,"y1":505,"x2":650,"y2":950},
+    {"from":"gateway","to":"provider","label":"HTTPS scrubbed context","x1":1410,"y1":765,"x2":1410,"y2":950},
+    {"from":"knowledge","to":"db","label":"own schema SQL","x1":1005,"y1":505,"x2":1005,"y2":950},
+    {"from":"submissions","to":"analytics","label":"events","x1":1410,"y1":390,"x2":1410,"y2":265},
+    {"from":"tutor","to":"submissions","label":"leak evaluation","x1":775,"y1":700,"x2":1235,"y2":490},
+    {"from":"tutor","to":"knowledge","label":"hint use","x1":600,"y1":650,"x2":830,"y2":490}
+  ]
+}
