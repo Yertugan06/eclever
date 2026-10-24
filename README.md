@@ -34,7 +34,7 @@ The planned client is React + TypeScript with Monaco. The backend is a FastAPI m
 | System design | [Requirements](docs/requirements-specification.md) · [Architecture](docs/architecture.md) · [ADR 0001](docs/adr/0001-modular-monolith-schema-per-module.md) |
 | Diagrams | [Context](docs/diagrams/context.svg) · [Use cases](docs/diagrams/use-cases.svg) · [Components](docs/diagrams/components.svg) · [Editable sources](docs/diagrams/README.md) |
 | Student and Teacher mockups | [Open the HTML prototype](docs/prototype/key-screens.html) — use its screen buttons; Exercise variant A is selected. |
-| Evaluation and management | [Verification plan](docs/verification-evaluation-plan.md) · [Milestones/risks](docs/project-management.md) · [Supervisor feedback status](docs/supervisor-feedback.md) |
+| Evaluation and management | [Verification plan](docs/verification-evaluation-plan.md) · [Milestones, risks and supervisor feedback status](docs/project-management.md) |
 | Submission | [Pre-defense 1 record](docs/submissions/pre-defense-1.md) |
 | Domain terms | [Glossary](GLOSSARY.md) |
 

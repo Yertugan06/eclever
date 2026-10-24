@@ -24,7 +24,7 @@ Target: 24 October 2026. Source: [committee checklist](committee-checklist.md).
 
 - [x] Write [functional and non-functional requirements](requirements-specification.md) with priorities and verifiable acceptance criteria for every mandatory requirement.
 - [x] Create [context](diagrams/context.svg), [use case](diagrams/use-cases.svg), and [component](diagrams/components.svg) diagrams with [editable sources](diagrams/README.md) and readable exports.
-- [ ] Commit the diagram sources and exports through the reviewed repository workflow.
+- [x] Commit the context and use-case sources and exports in [PR #6](https://github.com/Yertugan06/eclever/pull/6), and the component source and export in [PR #8](https://github.com/Yertugan06/eclever/pull/8).
 - [x] Cross-check diagrams against the [requirements](requirements-specification.md), [scenarios and data flow](architecture.md); diagram sources and exports use the same node/edge definitions.
 - [x] Add an [interactive HTML prototype](prototype/key-screens.html) for five Student and Teacher screens.
 
