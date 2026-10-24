@@ -24,7 +24,7 @@ Target: 24 October 2026. Source: [committee checklist](committee-checklist.md).
 
 - [x] Write [functional and non-functional requirements](requirements-specification.md) with priorities and verifiable acceptance criteria for every mandatory requirement.
 - [x] Create [context](diagrams/context.svg), [use case](diagrams/use-cases.svg), and [component](diagrams/components.svg) diagrams with [editable sources](diagrams/README.md) and readable exports.
-- [ ] Commit the diagram sources and exports through the reviewed repository workflow.
+- [x] Commit the diagram sources and exports; cross-student review remains unverified.
 - [x] Cross-check diagrams against the [requirements](requirements-specification.md), [scenarios and data flow](architecture.md); diagram sources and exports use the same node/edge definitions.
 - [x] Add an [interactive HTML prototype](prototype/key-screens.html) for five Student and Teacher screens.
 
@@ -36,10 +36,10 @@ Target: 24 October 2026. Source: [committee checklist](committee-checklist.md).
 
 ## 6. Project management, review, and repository submission
 
-- [x] Add a complete [README](../README.md) with the requested project information and the known YouTrack workspace; the live task records are still pending verification.
+- [x] Add a complete [README](../README.md) with the requested project information and the verified YouTrack project.
 - [x] Prepare the [15-task YouTrack creation worksheet](youtrack-tasks.csv) from the local ledger, with proposed owner, priority, due date, outcome and acceptance criterion for each item.
-- [ ] Create and verify the assigned, prioritized tasks in the [existing DEMO YouTrack project](https://eclever.youtrack.cloud/issues/DEMO?preview=ESL-3), then replace the [local task references](project-management.md#people-milestones-and-task-ledger) with actual issue links.
+- [x] Create and verify all 15 prioritized tasks in the [ECL YouTrack project](https://eclever.youtrack.cloud/issues/ECL), then link them from the [task ledger](project-management.md#people-milestones-and-task-ledger). Planned owners and deadlines are in descriptions; student accounts and a Due Date field are still needed for structured assignment and dates.
 - [x] Document [milestones, responsibilities, risks, dependencies, and next steps](project-management.md).
 - [ ] Record substantive supervisor feedback on key deliverables and the decisions or revisions made in response.
-- [ ] Record meaningful work in commits by each team member; link tasks to branches, commits or pull requests, and reviews.
+- [x] Record meaningful work in commits by both team members. Yertugan's task PRs are merged; Ruslan's commits are included in the `prob-period-1` snapshot. Task backlinks and cross-student reviews remain to be verified.
 - [ ] Before submission, commit the deliverables and create the `pre-defense-1` tag for the exact submitted version. Provide the repository link, tag, completed-work summary, known limitations, and outstanding tasks.

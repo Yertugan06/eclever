@@ -16,7 +16,7 @@ The intended outcomes are a working Python practice platform, a curriculum-mappe
 - **Ruslan Tsoy:** backend engineering and code runner.
 - **Supervisor:** Aliya D. Katyetova (Катьетова А.Д.; Latin spelling to confirm).
 
-This repository is in the **pre-defense 1 design stage** as of 22 October 2026. It contains documents, diagrams and an interactive HTML mockup; there is **no runnable EClever application or automated test suite yet**. Document task ownership and review status are in [project management](docs/project-management.md).
+This repository is in the **pre-defense 1 design stage** as of 24 October 2026. It contains documents, diagrams and an interactive HTML mockup; there is **no runnable EClever application or automated test suite yet**. Document task ownership and review status are in [project management](docs/project-management.md).
 
 The Core release covers a teacher-led Russian-language Python course, generated Student accounts, safe code checking, mastery estimation, adaptive recommendations, graduated checked Hints, dashboards and technical evaluation. A school pilot, Kazakh-language experience and Teacher Exercise authoring are contingent extensions. Voice, mascot, computer vision, DKT, generated Exercises and a durable runner queue are future work. See [scope tiers](docs/proposal.md#scope).
 
@@ -38,10 +38,10 @@ The planned client is React + TypeScript with Monaco. The backend is a FastAPI m
 | Submission | [Pre-defense 1 record](docs/submissions/pre-defense-1.md) |
 | Domain terms | [Glossary](GLOSSARY.md) |
 
-**YouTrack:** [user-provided issue view](https://eclever.youtrack.cloud/issues/DEMO?preview=ESL-3). Its URL names the `DEMO` board and previews `ESL-3`; the team will use the existing `DEMO` project, but assigned issues still need live verification; the [task ledger](docs/project-management.md#people-milestones-and-task-ledger) records local task references, proposed owners, priorities, acceptance criteria and deadlines. The repository is [github.com/Yertugan06/eclever](https://github.com/Yertugan06/eclever).
+**YouTrack:** [EClever issues](https://eclever.youtrack.cloud/issues/ECL). All 15 tasks in the [task ledger](docs/project-management.md#people-milestones-and-task-ledger) have verified `ECL-*` issue links, priorities, acceptance criteria, and planned owners and deadlines in their descriptions. The students do not yet have YouTrack accounts, so actual student assignment remains pending. The repository is [github.com/Yertugan06/eclever](https://github.com/Yertugan06/eclever).
 
 ## Repository and working with this draft
 
 `docs/` holds the committee package, `docs/diagrams/` has editable JSON sources and standalone SVG exports, and `docs/prototype/` has a static interactive mockup. `approximate.md` is the earlier technical scope and [the original review draft](docs/research/original-literature-review.docx) is preserved. The prototype can be opened directly in a desktop browser; it uses example data and does not contact a backend. Regenerate diagrams with `python3 docs/diagrams/render.py` (Python standard library only). Application setup, execution and tests will be documented when implementation starts. No credentials or Student personal data belong in the repository.
 
-The planned workflow is one branch per YouTrack task (`DEMO-<number>-short-name` after issue creation), a descriptive task-ID commit, and a PR reviewed by the other student. The exact submitted revision will be tagged `pre-defense-1` after review; the [submission record](docs/submissions/pre-defense-1.md) shows what is still pending.
+The planned workflow is one branch per YouTrack task (`ECL-<number>-short-name`), a descriptive task-ID commit, and a PR reviewed by the other student. The current documentation snapshot is tagged [`prob-period-1`](https://github.com/Yertugan06/eclever/tree/prob-period-1); the [submission record](docs/submissions/pre-defense-1.md) distinguishes this snapshot from the pending reviewed `pre-defense-1` milestone.

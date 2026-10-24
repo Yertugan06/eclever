@@ -15,7 +15,7 @@ The [proposal's assumptions A1–A6](proposal.md#assumptions-to-validate) and th
 
 ## Evidence collection plan
 
-**Owner:** Ruslan Tsoy, local task T09 in [project management](project-management.md#people-milestones-and-task-ledger). Arrange 3–5 short discussions with adult user representatives: preferably 3 informatics Teachers who teach grades 6–8, with a school or curriculum representative as an optional fourth or fifth participant. A substantive written agreement with an actual school/client is the checklist's alternative. Do not interview minors for this pre-defense task without a separate approved protocol.
+**Owner:** Ruslan Tsoy, [ECL-32](https://eclever.youtrack.cloud/issue/ECL-32) (local task T09) in [project management](project-management.md#people-milestones-and-task-ledger). Arrange 3–5 short discussions with adult user representatives: preferably 3 informatics Teachers who teach grades 6–8, with a school or curriculum representative as an optional fourth or fifth participant. A substantive written agreement with an actual school/client is the checklist's alternative. Do not interview minors for this pre-defense task without a separate approved protocol.
 
 Before each discussion, explain the project, ask permission to take anonymised notes, and avoid recording Student names or school personal data in this public repository. Record the date, participant role, method and non-identifying evidence. Distinguish a direct statement or observed workflow from the team's interpretation. Link each finding to an assumption and a requirement or design decision. Keep private contact details and raw messages outside the repository.
 

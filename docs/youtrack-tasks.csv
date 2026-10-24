@@ -1,76 +1,76 @@
-Local Ref,Project Key,Summary,Assignee,Priority,Due Date,Description
-T01,DEMO,Complete project README,Ruslan Tsoy,Critical,2026-10-23,"Local planning reference: T01 (not a YouTrack ID).
+Local Ref,YouTrack Issue,Project Key,Summary,Assignee,Priority,Due Date,Description
+T01,ECL-27,ECL,Complete project README,Ruslan Tsoy,Critical,2026-10-23,"Local planning reference: T01 (not a YouTrack ID).
 Expected outcome: Repository overview
 Acceptance criteria: README includes problem, users, scope, team, stack, status and docs/YouTrack links.
 Existing draft evidence: [README](../README.md); review pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T02,DEMO,Define initial requirements and acceptance criteria,Yertugan Toktal,Critical,2026-10-22,"Local planning reference: T02 (not a YouTrack ID).
+T02,ECL-20,ECL,Define initial requirements and acceptance criteria,Yertugan Toktal,Critical,2026-10-22,"Local planning reference: T02 (not a YouTrack ID).
 Expected outcome: Initial requirements
 Acceptance criteria: FR/NFR priorities and acceptance criteria exist for every Must; each maps to a TP/EX.
 Existing draft evidence: [Requirements](requirements-specification.md); review pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T03,DEMO,Tag reviewed pre-defense 1 submission,Ruslan Tsoy,Major,2026-10-24,"Local planning reference: T03 (not a YouTrack ID).
+T03,ECL-28,ECL,Tag reviewed pre-defense 1 submission,Ruslan Tsoy,Major,2026-10-24,"Local planning reference: T03 (not a YouTrack ID).
 Expected outcome: Frozen submission
 Acceptance criteria: Reviewed main commit has one annotated `pre-defense-1` tag; the submission note lists completed work, limitations and tasks, and the handoff records the resulting tag URL and SHA.
 Existing draft evidence: [Submission note](submissions/pre-defense-1.md); tag pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T04,DEMO,Write project proposal and scope,Yertugan Toktal,Critical,2026-10-22,"Local planning reference: T04 (not a YouTrack ID).
+T04,ECL-21,ECL,Write project proposal and scope,Yertugan Toktal,Critical,2026-10-22,"Local planning reference: T04 (not a YouTrack ID).
 Expected outcome: Project proposal
 Acceptance criteria: Title, people, problem, users, aim, six objectives, outcomes and scope tiers in one document.
 Existing draft evidence: [Proposal](proposal.md); review pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T05,DEMO,Describe component architecture,Ruslan Tsoy,Critical,2026-10-23,"Local planning reference: T05 (not a YouTrack ID).
+T05,ECL-29,ECL,Describe component architecture,Ruslan Tsoy,Critical,2026-10-23,"Local planning reference: T05 (not a YouTrack ID).
 Expected outcome: Draft component architecture
 Acceptance criteria: Nine modules, interfaces and data flows agree with source/export component diagram and ADR.
 Existing draft evidence: [Architecture](architecture.md), [diagram](diagrams/components.svg); owner review pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T06,DEMO,"Record milestones, responsibilities and risks",Ruslan Tsoy,Critical,2026-10-22,"Local planning reference: T06 (not a YouTrack ID).
+T06,ECL-30,ECL,"Record milestones, responsibilities and risks",Ruslan Tsoy,Critical,2026-10-22,"Local planning reference: T06 (not a YouTrack ID).
 Expected outcome: Management record
 Acceptance criteria: Milestones, ownership, dependencies, risks, mitigations and next steps are stated.
 Existing draft evidence: This document; owner review pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T07,DEMO,Organize repository design baseline,Yertugan Toktal,Critical,2026-10-21,"Local planning reference: T07 (not a YouTrack ID).
+T07,ECL-22,ECL,Organize repository design baseline,Yertugan Toktal,Critical,2026-10-21,"Local planning reference: T07 (not a YouTrack ID).
 Expected outcome: Repository structure
 Acceptance criteria: Checklist, glossary and ADR appear in reviewed commits without private material.
 Existing draft evidence: [Glossary](../GLOSSARY.md), [ADR](adr/0001-modular-monolith-schema-per-module.md); PR pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T08,DEMO,Complete critical literature review,Ruslan Tsoy,Critical,2026-10-23,"Local planning reference: T08 (not a YouTrack ID).
+T08,ECL-31,ECL,Complete critical literature review,Ruslan Tsoy,Critical,2026-10-23,"Local planning reference: T08 (not a YouTrack ID).
 Expected outcome: Critical literature review
 Acceptance criteria: Original draft retained; at least 12 meaningfully analysed sources, eight scientific, and publication table.
 Existing draft evidence: [Literature review](literature-review.md); owner review pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T09,DEMO,Collect relevance evidence from user representatives,Ruslan Tsoy,Critical,2026-10-23,"Local planning reference: T09 (not a YouTrack ID).
+T09,ECL-32,ECL,Collect relevance evidence from user representatives,Ruslan Tsoy,Critical,2026-10-23,"Local planning reference: T09 (not a YouTrack ID).
 Expected outcome: Relevance evidence
 Acceptance criteria: Record 3–5 user-representative discussions or a substantive actual-client agreement; link findings to A1–A6 and resulting decisions. An exception requires written committee acceptance.
 Existing draft evidence: [Evidence status](relevance-evidence.md); pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T10,DEMO,Record supervisor feedback and resulting decisions,Yertugan Toktal,Major,2026-10-23,"Local planning reference: T10 (not a YouTrack ID).
+T10,ECL-33,ECL,Record supervisor feedback and resulting decisions,Yertugan Toktal,Major,2026-10-23,"Local planning reference: T10 (not a YouTrack ID).
 Expected outcome: Supervisor feedback record
 Acceptance criteria: Actual review request, substantive comments, decisions and linked revisions are logged.
 Existing draft evidence: [Feedback log](supervisor-feedback.md); pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here.
 Collaborator: Ruslan Tsoy; both students record their own feedback and revisions."
-T11,DEMO,Define verification and evaluation protocol,Yertugan Toktal,Critical,2026-10-23,"Local planning reference: T11 (not a YouTrack ID).
+T11,ECL-23,ECL,Define verification and evaluation protocol,Yertugan Toktal,Critical,2026-10-23,"Local planning reference: T11 (not a YouTrack ID).
 Expected outcome: Evaluation protocol
 Acceptance criteria: Musts trace to test procedures; metrics, host conditions, datasets, baselines and limits stated.
 Existing draft evidence: [Verification plan](verification-evaluation-plan.md); review pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T12,DEMO,Create context and use-case diagrams,Yertugan Toktal,Critical,2026-10-23,"Local planning reference: T12 (not a YouTrack ID).
+T12,ECL-24,ECL,Create context and use-case diagrams,Yertugan Toktal,Critical,2026-10-23,"Local planning reference: T12 (not a YouTrack ID).
 Expected outcome: Context and use-case diagrams
 Acceptance criteria: Editable source and readable exports match actors, external systems and FRs.
 Existing draft evidence: [Context](diagrams/context.svg), [use cases](diagrams/use-cases.svg); review pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T13,DEMO,Compare key technology alternatives,Ruslan Tsoy,Critical,2026-10-22,"Local planning reference: T13 (not a YouTrack ID).
+T13,ECL-34,ECL,Compare key technology alternatives,Ruslan Tsoy,Critical,2026-10-22,"Local planning reference: T13 (not a YouTrack ID).
 Expected outcome: Technology rationale
 Acceptance criteria: At least three decisions compare 2–3 options against requirements and state choice/trade-off.
 Existing draft evidence: [Technology comparison](technology-comparison.md); owner review pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T14,DEMO,Create key Student and Teacher mockups,Yertugan Toktal,Critical,2026-10-23,"Local planning reference: T14 (not a YouTrack ID).
+T14,ECL-25,ECL,Create key Student and Teacher mockups,Yertugan Toktal,Critical,2026-10-23,"Local planning reference: T14 (not a YouTrack ID).
 Expected outcome: Key screen mockups
 Acceptance criteria: Student map, code/Predict Exercise and Teacher dashboard/roster scenarios are viewable.
 Existing draft evidence: [HTML prototype](prototype/key-screens.html); review pending.
 Done only after the deliverable is checked, the task-linked change is reviewed, and its branch/commit/PR is linked here."
-T15,DEMO,Compare existing systems,Yertugan Toktal,Critical,2026-10-22,"Local planning reference: T15 (not a YouTrack ID).
+T15,ECL-26,ECL,Compare existing systems,Yertugan Toktal,Critical,2026-10-22,"Local planning reference: T15 (not a YouTrack ID).
 Expected outcome: Existing-system comparison
 Acceptance criteria: Five systems use the same nine criteria with source links and honest undocumented cells.
 Existing draft evidence: [Existing systems](existing-systems-comparison.md); review pending.
